@@ -1,6 +1,7 @@
-<!DOCTYPE html>
-</html>
-    </body>
+<?php
+$text = <<<EOL
+안녕하세요
+EOL;
 
     <?php
         ECHO "Hello World!<br>";
