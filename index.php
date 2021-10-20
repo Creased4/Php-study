@@ -1,18 +1,8 @@
 <?php
-$text = <<<EOL
-안녕하세요
-EOL;
-
-    <?php
-        ECHO "Hello World!<br>";
-        
-        echo "Hello
-            World!<br>";
-
-        ecHo "Hello
-            world!
-            <br>";
-     ?>
-
-    </body>
-</html> 
+    print "<h2>PHp is enjoy!</h2>";
+    print "Hello jiny world!<br>";
+    print "I'm about to learn PHP!";
+?>
+<?php
+    phpinfo();
+?>
