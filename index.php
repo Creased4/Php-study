@@ -1,9 +1,16 @@
-<?php
-    print "<h2>결과값.</h2>";
-?>
-<?php
-    $x = 5;
-    $y = 4;
-    $d = $x + $y;
-    echo "값은 $d 입니다."
+<form method="post"> 
+    <input type="submit" name="test" value="버튼" /><br/> 
+</form> 
+
+<?php 
+
+function testfun() 
+{ 
+    echo "1"; 
+} 
+
+if(array_key_exists('test',$_POST)){ 
+    testfun(); 
+} 
+
 ?>
