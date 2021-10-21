@@ -1,16 +1,17 @@
-<form method="post"> 
-    <input type="submit" name="test" value="버튼" /><br/> 
-</form> 
+<?php
+    $i = 0;
+    echo "연산자 실행 전";
+    echo "1 = $1 <br>";
 
-<?php 
+    echo "연산자 2 실행 후 ";
+    $i += 2;
+    echo "i = $i <br>";
+    
+    echo "연산자 3 실행 후 ";
+    $i += 3;
+    echo "i = $i <br>";
 
-function testfun() 
-{ 
-    echo "버튼 출력 글자"; 
-} 
-
-if(array_key_exists('test',$_POST)){ 
-    testfun(); 
-} 
-
+    echo "연산자 10 실행후";
+    $i += 10;
+    echo "i = $i <br>";
 ?>
