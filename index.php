@@ -6,7 +6,7 @@
 
 function testfun() 
 { 
-    echo "1"; 
+    echo "버튼 출력 글자"; 
 } 
 
 if(array_key_exists('test',$_POST)){ 
