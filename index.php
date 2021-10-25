@@ -4,7 +4,8 @@
     echo is_array($yes) ? 'array' : 'not an Array';
     echo "\n";
 
-    $no = 'this is a string';
+        public function getworld(){
+            return $this->world;
+        }
 
-    echo is_array($no) ? 'array' : 'not an Array';
     ?>
