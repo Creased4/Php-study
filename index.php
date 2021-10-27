@@ -1,30 +1,23 @@
 <?php
-    trait Hello {
-        public function sayhelloWorld() {
-            echo "Hello".$this->getWorld();
-        }
-        
-        abstract public function getWorld();
-    }
-    
-    class MyHelloWorld {
-        private $world;
+    class JinyClass
+    {
 
-        use Hello;
-
-        public function getworld(){
-            return $this->world;
-        }
-
-        public function setWorld($val) {
-            $this->world = $val;
+        public function test($msg)
+        {
+            return $msg;
         }
     }
-    $obj = new MyhelloWorld;
-    $obj->setWorld("jiny");
 
-    echo $obj->getWorld();
-    echo "<br>";
-    $obj->sayHelloWorld();
+    $jinyClass = new JinyClass();
+    echo "JinyClass 인스턴스<br>";
+    echo $JinyClass->test("JinyClass") . "<br>";
 
+    $obj1 = new JinyClass;
+    $obj2 = new JinyClass;
+
+    echo"클래스 인스턴스1<br>";
+    echo $obj1->test(1) . "<br>";
+
+    echo"클래스 인스턴스2<br>";
+    echo $obj2->test(2) . "<br>";
 ?>
