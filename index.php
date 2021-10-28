@@ -1,29 +1,23 @@
 <?php
-    if (count($_COOKIE) > 0){
-        echo "Cookies 존재. <br>";
-        print_r($_COOKIE);
-    } else {
-        echo "Cookies 없음.<br>";
+    class JinyClass
+    {
+
+        public function test($msg)
+        {
+            return $msg;
+        }
     }
 
-    session_unset();
+    $jinyClass = new JinyClass();
+    echo "JinyClass 인스턴스<br>";
+    echo $JinyClass->test("JinyClass") . "<br>";
 
-    session_destroy();
+    $obj1 = new JinyClass;
+    $obj2 = new JinyClass;
 
-    session_start([
-        'cache_limiter' => 'private',
-        'read_and_close'=> true,
-    ])
+    echo"클래스 인스턴스1<br>";
+    echo $obj1->test(1) . "<br>";
 
-    echo "PATH_TRANSLATED = ". $_SERVER['PATH_TRANSLATED'];
-    echo "<br>";
-
-    echo "SCRIPT_FILENAME = ". $_SERVER['SCRIPT_FILENAME'];
-    echo "<br>";
-    
-    echo "SCRIPT_NAME = ".$_SERVER['SCRIPT_FILENAME'];
-    echo "<br>";
-
-    echo "SCRIPT_URI =".$_SERVER['SCRIPT_URI'];
-    echo "<br>";
+    echo"클래스 인스턴스2<br>";
+    echo $obj2->test(2) . "<br>";
 ?>
