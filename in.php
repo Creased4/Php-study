@@ -1,37 +1,23 @@
 <?php
-    $a =true;
-    if ($a) {
-        echo "a = ture(참) 입니다.";
-    } else{
-        echo "a + false(거짓) 입니다.";
+    class JinyClass
+    {
+
+        public function test($msg)
+        {
+            return $msg;
+        }
     }
 
-    echo "<br>";
+    $jinyClass = new JinyClass();
+    echo "JinyClass 인스턴스<br>";
+    echo $JinyClass->test("JinyClass") . "<br>";
 
-    $b = TRUE;
-    if ($b) {
-        echo "b = true(참)입니다.";
-    }else{
-        echo "b = false(거짓) 입니다.";
-    }
-    
-    echo"<br>";
+    $obj1 = new JinyClass;
+    $obj2 = new JinyClass;
 
-    $c = false;
-    if ($c) {
-        echo "c = true(참)입니다.";
-    }else{
-        echo "c = false(거짓) 입니다.";
-    }
+    echo"클래스 인스턴스1<br>";
+    echo $obj1->test(1) . "<br>";
 
-    echo"<br>";
-
-    $d = FALSE;
-    if ($d) {
-        echo "d = true(참)입니다.";
-    } else {
-        echo "d = false(거짓)입니다.";
-    }
-
-    echo "<br>";
-    ?>
+    echo"클래스 인스턴스2<br>";
+    echo $obj2->test(2) . "<br>";
+?>
