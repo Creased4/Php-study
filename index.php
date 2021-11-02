@@ -1,25 +1,27 @@
 <?php
-    function _coalescing($var, $default){
-        if (isset($var)){
-            if ($var == NULL) {
-                return $var;
-            } else {
-                return $default;
-            }
-        }else {
-            return $default;
+    class Jiny
+    {
+        public static $aaa = 10;
+        public function show() {
+            echo "show = ". self::$aaa;
         }
     }
+    
+    echo "aaa = ". Jiny::$aaa."<br>";
 
+    Jiny::show();
+    
     $x;
-    if (is_null($x)){ 
+
+    if(is_null($x)) {
         echo "x = NULL입니다.";
-    } else {
+    }else {
         echo "x = NULL이 아닙니다.";
     }
 
-    echo "<br>";
+    echo"<br>";
 
-    $username = _coalescing($x,"nobody");
+    $username = $x ?? 'nobody' ;
     echo "username = $username";
+
     ?>
