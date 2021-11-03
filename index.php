@@ -1,27 +1,28 @@
 <?php
-    class Jiny
-    {
-        public static $aaa = 10;
-        public function show() {
-            echo "show = ". self::$aaa;
+    for ($i = 0; $i < 5; $i++) {
+        echo "세트$i 시작<br>";
+
+    for ($j = 0; $j < 10; $j++) {
+        echo "웟몸 일으키기<br>";
+    }
+
+    echo "===휴식 10분=== <br>";
+}
+
+    $cars = array(
+        array("Volvo",10,300),
+        array("BMW",11,250),
+        array("Saab",12,350),
+        array("kia",13,200)
+    );
+
+    for ($i = 0; $i < 4; $i++) {
+    
+        for ($j = 0; $j <3; $j++) {
+            echo $cars[ $i][$j];
+            echo "";
         }
-    }
-    
-    echo "aaa = ". Jiny::$aaa."<br>";
-
-    Jiny::show();
-    
-    $x;
-
-    if(is_null($x)) {
-        echo "x = NULL입니다.";
-    }else {
-        echo "x = NULL이 아닙니다.";
+        echo "<br>";
     }
 
-    echo"<br>";
-
-    $username = $x ?? 'nobody' ;
-    echo "username = $username";
-
-    ?>
+?>
