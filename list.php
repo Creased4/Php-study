@@ -1,4 +1,6 @@
 <?php
+
+//sql로그인
 $conn = mysqli_connect(
     'localhost',
     'root',
@@ -7,6 +9,7 @@ $conn = mysqli_connect(
   ?>
  <!doctype html>
 <html>
+<!--부스트랩 적용-->
   <head>
     <meta charset="utf-8">
     <title>WEB</title>
@@ -21,6 +24,7 @@ $conn = mysqli_connect(
  $result = mysqli_query($conn, $sql);
 ?>
 
+<!--화면 출력-->
 <table class="table">
   <thead>
     <tr>
@@ -33,6 +37,7 @@ $conn = mysqli_connect(
 <?php
  while ($data=mysqli_fetch_array($result)){
 ?>
+<!-- 테이터베이스 리스트 화면 출력-->
     <tr>
       <th scope="row"><?php echo($data['id'])?></th>
       <td><?php echo($data['title'])?></td>
@@ -42,9 +47,9 @@ $conn = mysqli_connect(
 
  }
 ?>
+<!-- 글쓰기 창으로 다시 돌아가기.-->
   </tbody>
 </table>
-
 <a href="make.php" class="btn btn-primary">글쓰기</a> 
 
 </body>
